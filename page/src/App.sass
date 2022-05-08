@@ -1,0 +1,97 @@
+.background
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background-size: cover
+    background-position: 50% 50%
+
+.loading
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    backdrop-filter: blur(20px)
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 1.5em
+    font-weight: 600
+    transition: all .5s ease-in-out
+
+    &.fadeOut
+        opacity: 0
+        visibility: hidden
+
+.buttons
+    position: fixed
+    top: 4em
+    left: 50%
+    transform: translateX(-50%)
+    height: 6em
+
+.users
+    position: absolute
+    top: 10em
+    left: 50%
+    transform: translateX(-50%)
+    height: calc(100vh - 10em)
+    width: 100%
+    overflow-y: scroll
+
+.btn
+    background: #ff3c3c
+    padding: .3em .8em
+    border-radius: 14px
+    font-size: 1.2em
+    font-weight: 600
+    color: #000
+    margin: .2em
+    width: fit-content
+    transition: all .2s ease-in-out
+    user-select: none
+    white-space: nowrap
+
+    &.clickable
+        &.active
+            background: #060606
+            color: #fff
+
+            &:hover
+                background: #060606
+
+        &:hover
+            background: #c72626
+            cursor: pointer
+
+.row
+    display: flex
+
+.watermark
+    position: fixed
+    bottom: .5em
+    right: .7em
+    z-index: 5
+    opacity: 0.5
+
+    img
+        width: 12em
+        height: auto
+        margin-top: .2em
+
+::-webkit-scrollbar
+    width: 0
+
+@media screen and (max-width: 768px)
+    html
+        font-size: 14px
+
+    .watermark img
+        width: 5em
+
+@media screen and (min-width: 768px)
+    html
+        font-size: 16px
