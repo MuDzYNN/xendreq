@@ -25,7 +25,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3001/getData").then(res => res.json()).then(res => {
+    fetch(window.location.protocol + '//' + window.location.hostname + '/getData').then(res => res.json()).then(res => {
       Sort("level", res);
       setFetchedData(true)
     });
@@ -44,7 +44,7 @@ function App() {
       </div>
       <div className="users">
         {users.length > 0 ? (
-          users.map((user, key) => <User key={key} avatar={user.avatar} nickname={user.nickname} level={user.level} exp={user.xp} money={user.kasa} messages={user.wia} />)
+          users.map((user, key) => <User key={key} avatar={user.avatar} nickname={user.nickname} level={user.level} exp={user.xp} xpneeded={user.xpneeded} money={user.kasa} messages={user.wia} />)
         ) : null}
       </div>
       <a className="watermark" href="https://discord.com/invite/Ymd78XQW8U" target="_blank" rel="noreferrer">

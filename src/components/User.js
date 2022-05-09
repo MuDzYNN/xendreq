@@ -1,6 +1,6 @@
 import "./User.sass";
 
-const User = ({ avatar, nickname, level, exp, money, messages }) => {
+const User = ({ avatar, nickname, level, exp, xpneeded, money, messages }) => {
     return (
         <div className="user">
             <div className="user-avatar">
@@ -9,7 +9,7 @@ const User = ({ avatar, nickname, level, exp, money, messages }) => {
             </div>
             <div className="user-data">
                 <p>Poziom: {level ? level : 0}</p>
-                <p>Exp: {exp ? exp : 0}</p>
+                <p>Exp: {exp}/{xpneeded}</p>
                 <p>Ilość kasy: {money ? money : 0}</p>
                 <p>Wiadomości: {messages ? messages : 0}</p>
             </div>
