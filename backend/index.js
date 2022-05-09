@@ -54,4 +54,4 @@ app.get('/getData', (req, res) => {
     });
 });
 
-app.listen(3001, () => console.log('Listening at http://127.0.0.1:3001'));
+app.listen(90, () => console.log('Listening at http://127.0.0.1:3001'));

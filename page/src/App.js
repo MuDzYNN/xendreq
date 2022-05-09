@@ -25,7 +25,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3001/getData").then(res => res.json()).then(res => {
+    fetch("http://83.31.54.100/getData").then(res => res.json()).then(res => {
       Sort("level", res);
       setFetchedData(true)
     });
@@ -47,10 +47,10 @@ function App() {
           users.map((user, key) => <User key={key} avatar={user.avatar} nickname={user.nickname} level={user.level} exp={user.xp} money={user.kasa} messages={user.wia} />)
         ) : null}
       </div>
-      <a className="watermark" href="https://discord.com/invite/Ymd78XQW8U" target="_blank">
+      <a className="watermark" href="https://discord.com/invite/Ymd78XQW8U" target="_blank" rel="noreferrer">
         <img src={watermark} alt="makeall.pl" />
       </a>
-      <div className={`loading ${fetchedData ? "fadeOut" : ""}`}>Ładowanie...</div>
+      <div className={`loading ${fetchedData ? "fadeOut" : ""}`}><span></span> Ładowanie...</div>
     </div>
   );
 }
