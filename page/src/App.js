@@ -25,7 +25,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://83.31.54.100/getData").then(res => res.json()).then(res => {
+    fetch("http://127.0.0.1:3001/getData").then(res => res.json()).then(res => {
       Sort("level", res);
       setFetchedData(true)
     });
